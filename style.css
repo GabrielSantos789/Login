@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+@media screen {
+    @font-face {
+        font-family: 'Neue';
+        src: url('Fonts/Neue.ttf') format('opentype');
+    }
+    
+    @font-face {
+        font-family: 'NexaBold';
+        src: url('Fonts/nexa/Nexa-Heavy.ttf') format('truetype');
+    }
+    
+    :root {
+        /*Colors*/
+        --color-gradient-01:#392467;
+        --color-gradient-02:#5D3587;
+        --color-gradient-03:#A367B1;
+        --form-background-color:#ffffff;
+        --text-color:#1c1133;
+        --shadow: 5px 5px 8px #00000067;
+    
+        /*Fonts*/
+        --font-01: 'Neue', Arial, Helvetica, Sans-serif;
+        --font-02:'NexaBold', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    body {
+        background-attachment: fixed;
+        background-image: linear-gradient(
+            to top, 
+            var(--color-gradient-01), 
+            var(--color-gradient-02),
+            var(--color-gradient-03)
+        )
+    }
+    
+    .form-container {
+        --box-position: 50%;
+        position: absolute;
+        left: var(--box-position);    
+        top: var(--box-position);
+        transform: translate(
+            calc(var(--box-position)*-1),
+            calc(var(--box-position)*-1)
+        );
+    }
+    
+    form {
+        background-color: var(--form-background-color);
+        border-radius: 10px;
+        width: 80vw;
+    }
+    
+    form > h1 {
+        text-align: center;
+        font-family: var(--font-02);
+        font-weight: bolder;
+    }
+    
+    form input {
+        width: 45vw;
+        font-size: 1.1em;
+        padding: 5px;
+        margin: 8px 0px;
+        border-radius: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    
+    .form-main-content, .button, .sign {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sign {
+        font-size: 1em;
+        font-family: var(--font-01);
+    }
+    
+    .sign a {
+        color: black;
+        font-weight: bolder;
+        text-decoration: none;
+        font-style: normal;
+    }
+    
+    .sign a:hover {
+        text-decoration: underline;
+    }
+    
+    button {
+        width:50vw;
+        margin: 10px 10px;
+        padding: 0px 10px;
+        border: 0;
+        font-size: 1.2em;
+        border-radius: 10px;
+        color: var(--form-background-color);
+        font-family: var(--font-02);
+        box-shadow: var(--shadow);
+        background-image: linear-gradient( 
+            to right,
+            var(--color-gradient-01), 
+            var(--color-gradient-03)
+        );
+    }   
+    
+    button:hover {
+        background-image: linear-gradient( 
+            to right,
+            var(--color-gradient-02), 
+            var(--color-gradient-03)
+        );
+    }
+}
+
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*------------------------------------ Style for tablets ------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 480px) {
+    /*for now, those setting are just for testing purposes*/
+    body {
+        background-color: aquamarine;
+    }
+}
