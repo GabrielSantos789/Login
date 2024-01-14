@@ -154,7 +154,19 @@
 
 @media screen and (min-width: 1025px) {
     /*temporary settings*/
-    body {
-        width: 500px;
+    form {
+        width: 573px;
+    }
+
+    form input {
+        width: 350px;
+    }
+
+    .sign {
+        font-size: 1.2em;
+    }
+
+    button {
+        width: 200px;
     }
 }
