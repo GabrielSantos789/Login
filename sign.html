@@ -6,10 +6,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="style.css">
         <title>Document</title>
-        <script>
-            alert('Important: For now, this project just works in mobile devices')
-        </script>
-        <!-- Don't worry, i'll remove this message later, when the project is complete -->
     </head>
     <body>
         <div class="form-container">
@@ -35,18 +31,17 @@
                             <i class="material-icons" id="input-icon">lock</i>
                         </label>
                     </div>
-                </div>
-                <div class="sign">
-                    <p>
-                        <small>
-                            Don't have an account?
-                            <a href="sign.html" target="_blank" rel="external">Sign In</a>
-                        </small>
-                    </p>
+                    <div>
+                        <label for="phone-id">
+                            <input type="tel" name="phone" id="phone-id" required autocomplete="tel" 
+                            placeholder="(xx) xxxx-xxxx">
+                        </label>
+                        <i class="material-icons" id="input-icon">phone_enabled</i>
+                    </div>
                 </div>
                 <div class="button">
                     <button type="submit">
-                        Sign
+                        Sign In
                     </button>
                 </div>
             </form>

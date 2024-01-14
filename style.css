@@ -50,6 +50,7 @@
         background-color: var(--form-background-color);
         border-radius: 10px;
         width: 80vw;
+        box-shadow: var(--shadow);
     }
     
     form > h1 {
@@ -79,6 +80,10 @@
         align-items: center;
     }
     
+    .form-main-content {
+        padding-left: 25px;
+    }
+
     .sign {
         font-size: 1em;
         font-family: var(--font-01);
@@ -113,6 +118,7 @@
     }   
     
     button:hover {
+        color: #e7e7e7;
         background-image: linear-gradient( 
             to right,
             var(--color-gradient-02), 
@@ -123,12 +129,32 @@
 
 
 /*-------------------------------------------------------------------------------------------------------*/
-/*------------------------------------ Style for tablets ------------------------------------------------*/
+/*------------------------------------ style for tablets ------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------*/
 
-@media screen and (min-width: 480px) {
-    /*for now, those setting are just for testing purposes*/
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+
+    form {
+        width: 384px;
+    }
+
+    form input {
+        width: 220px;
+    }
+
+    button {
+        width: 200px;
+    }
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------- style for bigger devices ----------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 1025px) {
+    /*temporary settings*/
     body {
-        background-color: aquamarine;
+        width: 500px;
     }
 }
