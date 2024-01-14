@@ -3,31 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="style.css">
         <title>Document</title>
-        <script>
+        <!-- <script>
             alert('Important: For now, this project just works in mobile devices')
-        </script>
+        </script> -->
         <!-- Don't worry, i'll remove this message later, when the project is complete -->
     </head>
     <body>
         <div class="form-container">
-            <form action="" >
+            <form action="document.php" method="POST" autocomplete="on">
                 <h1>Login</h1>
                 <div class="form-main-content">
                     <div>
                         <label for="user-id">
                             <input type="text" name="user" id="user-id" required minlength="5" placeholder="Username" autocomplete="name">
+                            <i class="material-icons" id="input-icon">account_circle</i>
                         </label>
+                        
                     </div>
                     <div>
                         <label for="mail-id">
                             <input type="email" name="mail" id="mail-id" required autocomplete="email" placeholder="E-Mail">
+                            <i class="material-icons" id="input-icon">mail</i>
                         </label>
                     </div>
                     <div>
                         <label for="pass-id">
                             <input type="password" name="pass" id="pass-id" required autocomplete="current-password" placeholder="Password">
+                            <i class="material-icons" id="input-icon">lock</i>
                         </label>
                     </div>
                 </div>
